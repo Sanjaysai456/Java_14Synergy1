@@ -30,6 +30,7 @@ export default function IndexPage() {
                 <button className="border border-white text-white px-6 py-2 rounded-md hover:bg-white hover:text-black transition">
                     Login
                 </button>
+                <h1>hello</h1>
             </Link>
             <Link to="/sign-up">
                 <button className="border border-white text-white px-6 py-2 rounded-md hover:bg-white hover:text-black transition">
