@@ -15,6 +15,7 @@ export default function IndexPage() {
             <Link to="/" className="hover:underline">
                 Home
             </Link>
+            <h1>fgg</h1>
             <Link to="/contact" className="hover:underline">
                 Contact Us
             </Link>
