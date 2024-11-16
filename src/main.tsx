@@ -9,14 +9,14 @@ import RootLayout from './layouts/root-layout'
 import DashboardLayout from './layouts/DashboardLayout'
 
 // Import the components
-import IndexPage from './routes'
-import ContactPage from './routes/contact'
-import SignInPage from './routes/sign-in'
-import SignUpPage from './routes/sign-up'
-import DashboardPage from './routes/dashboard'
-import  Roles from './routes/roleselect'
-import Roleselect from './routes/roleselect'
-import Admin from './routes/Admin/Admindashboard'
+import IndexPage from './App'
+import ContactPage from './pages/contact'
+import SignInPage from './pages/sign-in'
+import SignUpPage from './pages/sign-up'
+import DashboardPage from './pages/dashboard'
+import  Roles from './pages/roleselect'
+import Roleselect from './pages/roleselect'
+import Admin from './pages/Admin/Admindashboard'
 import User from './routes/User/User'
 
 const router = createBrowserRouter([
