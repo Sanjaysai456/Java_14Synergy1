@@ -23,7 +23,7 @@ export default function RootLayout() {
                 
                 <div className="space-x-4">
                     <SignedIn>
-                        <UserButton />
+                        
                     </SignedIn>
                     
                 </div>

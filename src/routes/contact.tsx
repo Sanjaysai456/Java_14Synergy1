@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import { ClerkProvider, SignedIn, SignedOut, UserButton } from '@clerk/clerk-react';
 
 export default function ContactPage() {
   return (
@@ -10,6 +11,7 @@ export default function ContactPage() {
       <ul>
         <li>
           <Link to="/">Return to Index</Link>
+          <UserButton />
         </li>
         <li>
           <Link to="/dashboard">Dashboard</Link>
