@@ -1,11 +1,12 @@
+import React from 'react';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { FaBars, FaTimes } from 'react-icons/fa'; // Importing icons
-import { ClerkProvider, SignedIn, SignedOut, UserButton, useAuth } from '@clerk/clerk-react';
+import { FaBars, FaTimes } from 'react-icons/fa';
+import { SignedIn, UserButton, useUser } from '@clerk/clerk-react';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const user = useAuth(); // Fetch user data from Clerk
+  const { user } = useUser(); // Use useUser instead of useAuth
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -23,7 +24,7 @@ export default function Header() {
                 showName
                 appearance={{
                   elements: {
-                    userProfileButton: 'text-white', // Custom CSS class to set username to white
+                    userProfileButton: 'text-white',
                   },
                 }}
               />
@@ -65,7 +66,9 @@ export default function Header() {
           <h2 className="text-white text-lg font-bold mb-4">Menu</h2>
           <ul className="space-y-2">
             <li>
-              
+              <Link to="/" className="text-white hover:underline block py-2 px-4 rounded">
+                Home
+              </Link>
             </li>
             <li>
               <Link to="/contact" className="text-white hover:underline block py-2 px-4 rounded">
@@ -77,7 +80,6 @@ export default function Header() {
                 Settings
               </Link>
             </li>
-            {/* Add more menu items here */}
           </ul>
         </div>
       </div>
